@@ -1,0 +1,67 @@
+body {
+    margin: 0;
+    padding-top: 80px; /*네브바 땜에 그 크기만큼 패딩주기*/
+}
+
+div{
+    box-sizing: border-box;
+}
+
+.navbar {
+    display: flex;
+    position: fixed;
+    top: 0;
+    height: 40px;
+    width: 100%;
+    padding: 20px;
+    align-items: center;
+    box-shadow: 0 3px 5px -5px #333;
+    background-color: white;
+    z-index: 999;
+}
+
+
+.nav-search {
+    display: flex;
+    height: 100%;
+    width: 250px;
+    align-items: center;
+    justify-content: center;
+    border: 0.5px solid lightgray;
+    border-radius: 5px;
+    margin-left: 100px;
+}
+.navbar input {
+    transition: width 1s;
+}
+.navbar input:focus{
+    outline-color: skyblue;
+    width: 400px;
+}
+
+.search-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(52, 58, 64);
+    width: 45px;
+    height: 43px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border: none;
+}
+.search-button:hover{
+    cursor: pointer;
+}
+
+.main-content {
+    background-color: rgb(249, 249, 249);
+    display: block;
+    height: 768px;
+    /* padding: 20px; */
+}
+
+.main-content h2 {
+    margin-left: 185px;
+    margin-bottom: 50px;
+}

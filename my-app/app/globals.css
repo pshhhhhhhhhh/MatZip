@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    padding-top: 80px; /*네브바 땜에 그 크기만큼 패딩주기*/
+    /* padding-top: 80px; 네브바 땜에 그 크기만큼 패딩주기 */
 }
 
 div{
@@ -21,7 +21,7 @@ div{
 }
 
 
-.nav-search {
+/* .nav-search {
     display: flex;
     height: 100%;
     width: 250px;
@@ -37,7 +37,114 @@ div{
 .navbar input:focus{
     outline-color: skyblue;
     width: 400px;
+} */
+
+
+.nav-right-content {
+    display: flex;
+    margin-right: 40px;
+    align-items: center;
+    color: rgb(170, 169, 169);
 }
+
+.nav-right-content i {
+    margin-right: 30px;
+}
+
+.nav-right-content:hover i{
+    cursor: pointer;
+}
+
+.nav-right-content:hover p{
+    cursor: pointer;
+}
+
+
+
+
+
+/* .left-navbar:hover {
+    transition : all 0.5s;
+    transform: translateX(-350px);
+}
+.left-navbar:hover p{
+    cursor: pointer;
+} */
+/* .left-navbar i {
+    transition: all 0.5s;
+    transform: translateX(100px);
+} */
+/* .left-navbar:hover i {
+    transform: translateX(0px);
+    cursor: pointer;
+} */
+
+
+/* .left-navbar ul {
+    margin: 0;
+    padding: 0;
+}
+
+.left-navbar li {
+    display: flex;
+    margin-top: 25px;
+    list-style: none;
+    color: white;
+    font-weight: bold;
+    align-items: center;
+}
+.left-navbar p{
+    padding-left: 5px;
+} */
+
+
+
+
+.left-navbar {
+    width: 400px; /*25%*/
+    height: 100vh;
+    /* padding-left: 10px; */
+    background: #484bb3;
+    position: fixed;
+    z-index: 5;
+    color : white;
+    background: white;
+    transition : all 0.5s;
+    transform: translateX(0%); 
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 5px 0px 15px 0px;
+}
+
+.search-wrap {
+    position: relative;
+    display: flex;
+    top: 0px;
+    left: 0px;
+    z-index: 100;
+    width: 100%;
+    padding: 15px 25px;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+}
+
+.left-search {
+    display: flex;
+    height: 40px;
+    width: 250px;
+    align-items: center;
+    justify-content: center;
+    border: 0.5px solid lightgray;
+    border-radius: 5px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    outline : none;  
+    /* margin-left: 100px; */
+}
+
+.left-search:focus{
+    box-shadow: 0 3px 5px -5px #333;
+}
+
 
 .search-button {
     display: flex;
@@ -48,16 +155,164 @@ div{
     height: 43px;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
-    border: none;
 }
 .search-button:hover{
     cursor: pointer;
 }
 
+.fold-button{
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translateY(-50%);
+    /* z-index: 200; */
+    overflow: hidden;
+    display: inline-block;
+    /* font-size: 1px; */
+    /* line-height: 1px; */
+    /* color: transparent; */
+    /* vertical-align: top; */
+    width: 22px;
+    height: 49px;
+    background-color: rgb(255, 255, 255);
+    border-color: rgb(223, 223, 223);
+    border-radius: 5px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-width: 1px;
+    border-color: rgb(233, 233, 236);
+    align-items: center;
+    justify-content: center;
+}
+.fold-button:hover{
+    cursor: pointer;
+    color: rgb(124, 124, 124);
+}
+
+
+.fold-button i{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: rgb(124, 124, 124);
+}
+
+.fold-button:hover i {
+    color: rgb(52, 142, 244);
+}
+
+
+.region{
+    display: inline-block;
+    position: relative;
+    padding-right: 25px;
+    padding-left: 45px;
+    padding-bottom: 16px;
+    border-top: 1px solid;
+    border-top-color: rgb(240, 240, 243);
+    border-bottom: 1px solid;
+    border-bottom-color: rgb(240, 240, 243);
+    background-color: rgb(250, 252, 255);
+    /* margin-left: -8px; */
+}
+
+
+.region-span{
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 8px;
+    margin-right: 6px;
+    margin-left: 0px;
+    padding: 0;
+    
+}
+
+.region-span:hover{
+    cursor: pointer;
+}
+
+
+.region-point{
+    display: block;
+    position: relative;
+    padding: 0 11px;
+    border: 1px solid;
+    border-color: rgb(233, 233, 236);
+    border-radius: 18px;
+    background: #fff;
+    box-sizing: border-box;
+    color: #555558;
+    line-height: 34px;
+    font-size: 15px;
+}
+
+.region-point:hover{
+    background-color: rgb(242, 242, 242);
+    border-color: rgb(221, 221, 224);
+}
+
+.region-onclick{
+    display: block;
+    position: relative;
+    padding: 0 11px;
+    border: 1px solid;
+    border-color: rgb(27, 110, 243);
+    border-radius: 18px;
+    background: rgb(224, 232, 246);
+    box-sizing: border-box;
+    color: rgb(27, 110, 243);
+    line-height: 34px;
+    font-size: 15px;
+}
+
+
+.course-wrap{
+    display: flex;
+    overflow: hidden;
+    flex: 1;
+    flex-direction: column;
+    border-top: 1px solid;
+    background-color: white;
+}
+
+.course-wrap:hover{
+    background-color: #f0f0f3;
+    cursor: pointer;
+}
+
+.course{
+    padding-top: 20px;
+    padding-right: 25px;
+    padding-left: 25px;
+}
+
+.store-name{
+    display: block;
+    overflow: hidden;
+    max-height: 4.4rem;
+    line-height: 2.2rem;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    white-space: normal;
+    padding-right: 34px;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.store-address{
+    margin-top: 4px;
+    color: #555558;
+}
+
+
+
+
 .main-content {
     background-color: rgb(249, 249, 249);
     display: block;
-    height: 768px;
+    height: 100vh;
     /* padding: 20px; */
 }
 

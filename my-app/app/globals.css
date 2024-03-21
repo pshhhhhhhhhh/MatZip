@@ -276,15 +276,15 @@ div{
     background-color: white;
 }
 
-.course-wrap:hover{
-    background-color: #f0f0f3;
-    cursor: pointer;
-}
-
 .course{
     padding-top: 20px;
     padding-right: 25px;
     padding-left: 25px;
+}
+
+.course:hover{
+    background-color: #f0f0f3;
+    cursor: pointer;
 }
 
 .store-name{

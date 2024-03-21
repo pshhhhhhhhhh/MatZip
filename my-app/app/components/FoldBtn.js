@@ -13,7 +13,7 @@ const FoldBtn = () => {
     }
     
     const getToggle = useAppSelector(state=>{ // 액션을 한 결과값 불러오기
-        console.log(state.toggler.value)
+        // console.log(state.toggler.value)
         return state.toggler.value;
       });
 
@@ -22,7 +22,7 @@ const FoldBtn = () => {
         // <button className="fold-button"></button>
         <div>
         <button className = "fold-button" onClick={toggleHandeler}>
-        {getToggle ? <i class="fas fa-arrow-right"></i> : <i class="fas fa-arrow-left"></i>}
+        {getToggle ? <i className="fas fa-arrow-right"></i> : <i className="fas fa-arrow-left"></i>}
         </button> 
         </div>
     )

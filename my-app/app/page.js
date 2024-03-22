@@ -71,6 +71,16 @@ const courses = [ //임시 data
     store3 : '카라멜리에오',
     store3address : '서울 용산구 이태원로54길 74 2층',
   },
+  {
+    id: 3,
+    regionname: '한남',
+    store1 : '초초',
+    store1address : '서울 용산구 이태원로45길 4 1,2층',
+    store2 : '초쿠',
+    store2address : '서울 용산구 대사관로5길 34',
+    store3 : '킁킁킁',
+    store3address : '서울 용산구 이태원로54길 74 2층',
+  },
 ];
 
 export const course = courses;

@@ -16,7 +16,6 @@ const RegionBtn = (props) => {
     const dispatchHandeler = () =>{
         setToggle(!toggle)
         dispatch(regionUiActions.toggle(props.regions))
-        // console.log(props.regions)
     }
 
     const getNames = useAppSelector(state=>{ // 액션을 한 결과값 불러오기

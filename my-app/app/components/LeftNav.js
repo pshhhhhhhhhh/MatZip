@@ -1,6 +1,6 @@
 'use client'
 
-import { useAppDispatch,useAppSelector } from "@/lib/hooks";
+import { useAppDispatch, useAppSelector } from "@/lib/hooks";
 import { regionUiActions } from "@/lib/regionUiSlice";
 
 import Search from "./Search";
@@ -20,16 +20,18 @@ const LeftNav = () => {
     return JSON.stringify(state.regionUi.regionState); //Object형이기 때문에 stringfy해주기
   });
 
-  const getSearch = useAppSelector(state => { // 코스정보State
+  const getSearch = useAppSelector(state => { // State접근
+    //console.log("getSearch : " + " " + JSON.stringify(state.search.searchState))
     return JSON.stringify(state.search.searchState); //Object형이기 때문에 stringfy해주기
   });
 
 
-
-
-  console.log("여기는 레프트 내브" + " " + (getSearch))
-
   const courseNames = course.filter(courses => getNames.includes(courses.regionname)); //Course의 리전네임들 중 getName와 일치하는 배열 찾아서 반환
+
+
+
+  //console.log("getNames : " + " " + getNames)
+  //console.log("getSearch : " + " " + getSearch)
 
 
   return (
@@ -40,7 +42,7 @@ const LeftNav = () => {
           <i className="fas fa-search" style={{ color: "#ffffff" }}></i>
         </div>
       </div> */}
-      <Search course = {course}></Search>
+      <Search course={course}></Search>
 
       <div className="region"> {/** 지역 토글버튼 */}
         {region.map((region) =>
@@ -55,7 +57,7 @@ const LeftNav = () => {
           )))
         }
         {
-          courseNames.length > 0 && courseNames.map((course)=>(( //선택해서 배열에 값이 있다면 해당하는 값만 렌더링하기
+          courseNames.length > 0 && courseNames.map((course) => (( //선택해서 배열에 값이 있다면 해당하는 값만 렌더링하기
             <Courses courses={course} key={course.id} />
           )))
         }

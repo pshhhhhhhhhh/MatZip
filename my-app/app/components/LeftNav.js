@@ -29,9 +29,9 @@ const LeftNav = () => {
   const courseNames = course.filter(courses => getNames.includes(courses.regionname)); //Course의 리전네임들 중 getName와 일치하는 배열 찾아서 반환
 
 
-
-  //console.log("getNames : " + " " + getNames)
-  //console.log("getSearch : " + " " + getSearch)
+  //지역이름은 잘 찍힘 근데 가게명으로 하니까 안찍힘??
+  console.log("getNames : " + " " + getNames)
+  console.log("getSearch : " + " " + getSearch)
 
 
   return (

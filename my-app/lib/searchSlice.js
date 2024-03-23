@@ -60,7 +60,7 @@ const searchSlice = createSlice({ //카운터라는 스토어의 액션 정의
                     );
                 })
             }
-            //console.log("여기는 식당이름 검색 " + JSON.stringify(state.searchState))
+            console.log("여기는 식당이름 검색 " + JSON.stringify(state.searchState))
         },
         regionSearch(state, action) { //toggle이라는 액션을 호출함, state는 위의 값, action은 컴포넌트에서 보낸 값
 
@@ -154,7 +154,7 @@ const searchSlice = createSlice({ //카운터라는 스토어의 액션 정의
 
 
             }
-            //console.log("여기는 지역명 검색 " + JSON.stringify(state.searchState))
+            console.log("여기는 지역명 검색 " + JSON.stringify(state.searchState))
         }
     }
 });

@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import { useAppDispatch, useAppSelector } from '@/lib/hooks';
+import { regionUiActions } from "@/lib/regionUiSlice";
 import { searchActions } from "@/lib/searchSlice";
 
 
@@ -37,7 +38,6 @@ const Search = (props) => {
                 // 키가 'store1', 'store2', 'store3' 중 하나임?
                 if (searchValue != '' && //가게명으로 검색했을 때
                     (key.startsWith('store')) && course[key].includes(searchValue)) {
-                        console.log(" 매치드 네임에서 찍기기" + course[key].includes(searchValue))
                     return true
                 }
             }
@@ -47,9 +47,11 @@ const Search = (props) => {
         // 파라미터에 값이 있으면 밑의 걸 실행해주는거지
         if(matchedRegion.length > 0) {
             dispatch(searchActions.regionSearch(matchedRegion)); 
+            dispatch(regionUiActions.uiBoolean(false));
         }
         else if(matchedName.length > 0){
             dispatch(searchActions.storeSearch(matchedName));
+            dispatch(regionUiActions.uiBoolean(false));
         }
 
     }

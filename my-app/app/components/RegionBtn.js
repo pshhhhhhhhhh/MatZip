@@ -3,6 +3,7 @@
 import { useState } from "react"
 import { useAppDispatch, useAppSelector } from '@/lib/hooks';
 import { regionUiActions } from "@/lib/regionUiSlice";
+import { searchActions } from "@/lib/searchSlice";
 
 
 const RegionBtn = (props) => {
@@ -15,7 +16,8 @@ const RegionBtn = (props) => {
 
     const dispatchHandeler = () =>{
         setToggle(!toggle)
-        dispatch(regionUiActions.toggle(props.regions))
+        dispatch(regionUiActions.toggle(props.regions)) //지역버튼 state에 값 전송
+        dispatch(searchActions.uiBoolean(false))
     }
 
     const getNames = useAppSelector(state=>{ // 액션을 한 결과값 불러오기

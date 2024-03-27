@@ -6,9 +6,20 @@ import { createSlice } from '@reduxjs/toolkit';
 const regionUiSlice = createSlice({ //카운터라는 스토어의 액션 정의
     name: 'regionUiSlice', //이름
     initialState: { //초기값
-        regionState: [] //배열에 누른 지역명 담기
+        regionState: [], //배열에 지역명 담기
+        uiBoolean: true //만약 검색버튼을 누르면 이녀석은 false가 될거임
     },
     reducers: {
+        uiBoolean(state, action) { //여기는 RegionBtn에서 false를 보내서 검색하다 들어간 state값을 초기화해줄거임
+
+            //일단 새로운거 담아
+            const newRegion = action.payload;
+
+            if(!newRegion){
+                state.uiBoolean = false;
+                state.regionState = [];
+            }
+        },
         toggle(state, action) { //toggle이라는 액션을 호출함, state는 위의 값, action은 컴포넌트에서 보낸 값
 
             //일단 새로운거 담아

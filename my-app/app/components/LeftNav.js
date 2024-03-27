@@ -13,9 +13,9 @@ import { useState, useEffect } from "react";
 
 const LeftNav = () => {
 
-
-
-  const [searchToggle, setSearchToggle] = useState([]);
+  // Todo
+  // 초기화 버튼 만들기 
+  // input 내용 안날라가게 하기
 
 
   const getToggle = useAppSelector(state => { // 네브바 토글 액션값 불러오기
@@ -38,7 +38,7 @@ const LeftNav = () => {
   console.log("getSearch : " + " " + JSON.stringify(getSearch))
 
   return (
-    <nav className="left-navbar" style={{ transform: getToggle ? "translateX(-100%)" : "translateX(0%)" }}>
+    <nav className="left-navbar" style={{ transform: !getToggle ? "translateX(-100%)" : "translateX(0%)" }}>
       {/* <div className="search-wrap">
         <input placeholder="Search" className="left-search" />
         <div className="search-button" >

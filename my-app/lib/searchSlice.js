@@ -7,7 +7,7 @@ const searchSlice = createSlice({ //카운터라는 스토어의 액션 정의
     name: 'searchSlice', //이름
     initialState: { //초기값
         searchState: [], //배열에 지역명 담기
-        uiBoolean: true //만약 지역버튼을 누르면 이녀석은 false가 될거임
+        uiBoolean: false //만약 지역버튼을 누르면 이녀석은 false가 될거임
     },
     reducers: {
         uiBoolean(state, action) { //여기는 RegionBtn에서 false를 보내서 검색하다 들어간 state값을 초기화해줄거임
@@ -15,12 +15,12 @@ const searchSlice = createSlice({ //카운터라는 스토어의 액션 정의
             //일단 새로운거 담아
             const newRegion = action.payload;
 
-            if(!newRegion){
+            if (!newRegion) {
                 state.uiBoolean = false;
                 state.searchState = [];
             }
         },
-        
+
 
         storeSearch(state, action) { //toggle이라는 액션을 호출함, state는 위의 값, action은 컴포넌트에서 보낸 값
 
@@ -34,6 +34,11 @@ const searchSlice = createSlice({ //카운터라는 스토어의 액션 정의
             // 한남검색 한남,가게1 , 한남, 가게2
             // 한남에서 가게2검색 -> 가게2
             // 가게2에서 가게1검색 -> 가게1 
+
+            
+
+            //검색하니까 true로 바꿔주기
+            state.uiBoolean = true;
 
 
             //일단 새로운거 담아
@@ -82,6 +87,9 @@ const searchSlice = createSlice({ //카운터라는 스토어의 액션 정의
             // // 처음에 배열에 담음
             // // 만약 지역명이 같으면 그대로 둠
             // // 지역명이 다르면 기존 배열을 새로운 배열로 교체
+
+            //검색하니까 true로 바꿔주기
+            state.uiBoolean = true;
 
             // 새로운 region 정보
             const newRegion = action.payload;

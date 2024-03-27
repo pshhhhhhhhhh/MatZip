@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from "react"
+import { useState,useEffect } from "react"
 import { useAppDispatch, useAppSelector } from '@/lib/hooks';
 import { regionUiActions } from "@/lib/regionUiSlice";
 import { searchActions } from "@/lib/searchSlice";
@@ -10,9 +10,12 @@ const RegionBtn = (props) => {
 
 
     const [toggle, setToggle] = useState(false);
+
+    
     
     // 액션 객체를 전달할 dispatch를 생성하는 useAppDispatch 함수를 불러오기
     const dispatch = useAppDispatch();
+       
 
     const dispatchHandeler = () =>{
         setToggle(!toggle)
@@ -20,10 +23,20 @@ const RegionBtn = (props) => {
         dispatch(searchActions.uiBoolean(false))
     }
 
-    const getNames = useAppSelector(state=>{ // 액션을 한 결과값 불러오기
-        // console.log(state.regionUi.regionName)
-        // return state.regionUi.regionName;
-      });
+    const searchBoolean = useAppSelector(state=>{ // 서치슬라이스의 boolean값을 받아오기
+        return state.search.uiBoolean;
+    });
+    
+
+
+    useEffect(()=>{
+        if(searchBoolean === true){ //그게 true일때만
+        setToggle(false) //지역토글을 false로 해주자 그래야 검색한뒤에 지역토글 눌렀을때 토글버튼이 해제됨
+        }
+    },[searchBoolean]) //서치슬라이스의 boolean이 변동될때마다 실행되는데
+
+
+
 
     return (
         <span className="region-span" onClick={dispatchHandeler}>

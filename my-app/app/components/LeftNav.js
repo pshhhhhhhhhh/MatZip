@@ -14,9 +14,7 @@ import { useState, useEffect } from "react";
 const LeftNav = () => {
 
   // Todo
-  // 초기화 버튼 만들기 
-  // input 내용 안날라가게 하기
-
+  // 디테일 네브바 만들기
 
   const getToggle = useAppSelector(state => { // 네브바 토글 액션값 불러오기
     return state.toggler.value;
@@ -39,41 +37,38 @@ const LeftNav = () => {
 
   return (
     <nav className="left-navbar" style={{ transform: !getToggle ? "translateX(-100%)" : "translateX(0%)" }}>
-      {/* <div className="search-wrap">
-        <input placeholder="Search" className="left-search" />
-        <div className="search-button" >
-          <i className="fas fa-search" style={{ color: "#ffffff" }}></i>
-        </div>
-      </div> */}
+      
       <Search course={course}></Search>
+      
+      <div className="content-wrap">
+        <div className="region"> {/** 지역 토글버튼 */}
+          {region.map((region) =>
+            <RegionBtn regions={region} key={region.id} />
+          )}
+        </div>
 
-      <div className="region"> {/** 지역 토글버튼 */}
-        {region.map((region) =>
-          <RegionBtn regions={region} key={region.id} />
-        )}
+        <div className="course-wrap">
+          <ul style={{ padding: 0, margin: 0 }}>
+            {
+              (courseNames.length === 0 && getSearch.length === 0) && course.map((course) => (( //아무것도 선택하지 않았다면 course데이터 전부 렌더링하기
+                <Courses courses={course} key={course.id} />
+              )))
+            }
+            {
+              courseNames.length > 0 && courseNames.map((course) => (( //선택해서 배열에 값이 있다면 해당하는 값만 렌더링하기
+                <Courses courses={course} key={course.id} />
+              )))
+            }
+            {
+              getSearch.length > 0 && getSearch.map((course) => (( //선택해서 배열에 값이 있다면 해당하는 값만 렌더링하기
+                <Courses courses={course} key={course.id} />
+              )))
+            }
+          </ul>
+        </div>
       </div>
-
-      <div className="course-wrap">
-        {
-
-          (courseNames.length === 0 && getSearch.length === 0) && course.map((course) => (( //아무것도 선택하지 않았다면 course데이터 전부 렌더링하기
-            <Courses courses={course} key={course.id} />
-          )))
-        }
-        {
-          courseNames.length > 0 && courseNames.map((course) => (( //선택해서 배열에 값이 있다면 해당하는 값만 렌더링하기
-            <Courses courses={course} key={course.id} />
-          )))
-        }
-        {
-          getSearch.length > 0 && getSearch.map((course) => (( //선택해서 배열에 값이 있다면 해당하는 값만 렌더링하기
-            <Courses courses={course} key={course.id} />
-          )))
-        }
-
-      </div>
-      <FoldBtn></FoldBtn>
-    </nav>
+      <FoldBtn></FoldBtn> 
+    </nav >
   )
 }
 

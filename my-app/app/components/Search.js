@@ -26,12 +26,12 @@ const Search = (props) => {
                 // 키가 'regionname'임?
                 if (searchValue != '' && //지역으로 검색했을 때
                     (key === 'regionname') && course[key].includes(searchValue)) {
-                        console.log(" 매치드 리전에에에서 찍기기" + course[key].includes(searchValue))
+                    console.log(" 매치드 리전에에에서 찍기기" + course[key].includes(searchValue))
                     return true
                 }
             }
             return false
-        }); 
+        });
 
         const matchedName = props.course.filter(course => { // 검색한 값이 지역일때
             for (const key in course) {
@@ -45,11 +45,11 @@ const Search = (props) => {
         });
 
         // 파라미터에 값이 있으면 밑의 걸 실행해주는거지
-        if(matchedRegion.length > 0) {
-            dispatch(searchActions.regionSearch(matchedRegion)); 
+        if (matchedRegion.length > 0) {
+            dispatch(searchActions.regionSearch(matchedRegion));
             dispatch(regionUiActions.uiBoolean(false));
         }
-        else if(matchedName.length > 0){
+        else if (matchedName.length > 0) {
             dispatch(searchActions.storeSearch(matchedName));
             dispatch(regionUiActions.uiBoolean(false));
         }
@@ -62,11 +62,28 @@ const Search = (props) => {
         }
     };
 
+    const getSearch = useAppSelector(state => { // SearchSlice State 불러오기
+        return state.search.searchState;
+    });
+
     return (
-        <div className="search-wrap">
-            <input placeholder="Search" className="left-search" value={searchValue} onChange={searchHandeler} onKeyDown={handleOnKeyPress} />
-            <div className="search-button" onClick={dispatchHandeler}>
-                <i className="fas fa-search" style={{ color: "#ffffff" }}></i>
+        <div className="search-wrap1">
+            <div className="search-wrap2">
+                <input placeholder="Search" spellCheck="false" className="left-search" value={searchValue} onChange={searchHandeler} onKeyDown={handleOnKeyPress} />
+                <div className="box" style={{ flexGrow: "1" }}></div> {/**좌우정렬용 div */}
+                {searchValue ? //검색 취소 버튼
+                    <i className="fas fa-times-circle" style={{ color: "#000000", marginRight: "5px" }} onClick={() => {
+                        if(getSearch.length > 0){ //검색한게 있으면 새로고침해서 아예 비워주기
+                            window.location.reload();
+                        }
+                        else{ //아니면 그냥 input에 있는거만 없애
+                            setSearchValue('')
+                        }
+                    }} /> : null
+                }
+                <div className="search-button" onClick={dispatchHandeler}>
+                    <i className="fas fa-search" style={{ color: "#ffffff" }}></i>
+                </div>
             </div>
         </div>
     )

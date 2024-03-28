@@ -1,8 +1,11 @@
 'use client'
 
+
 const Courses = (props) => {
+
+
     return (
-        <li className="course">
+        <li className="course" >
             <a style={{ color: "#333" }}>{props.courses.regionname}</a>
             <div className="store-name">
                 <a>{props.courses.store1}</a>

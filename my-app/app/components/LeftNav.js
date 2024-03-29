@@ -19,15 +19,6 @@ const LeftNav = () => {
 
 
 
-
-  const [toggle, setToggle] = useState(false);
-
-  const uiHandler = () => {
-    setToggle(!toggle)
-  }
-
-
-
   const getToggle = useAppSelector(state => { // 네브바 토글 액션값 불러오기
     return state.toggler.value;
   });
@@ -60,7 +51,7 @@ const LeftNav = () => {
         </div>
 
         <div className="course-wrap">
-          <ul style={{ padding: 0, margin: 0 }} onClick={uiHandler}>
+          <ul style={{ padding: 0, margin: 0 }}>
             {
               (courseNames.length === 0 && getSearch.length === 0) && course.map((course) => (( //아무것도 선택하지 않았다면 course데이터 전부 렌더링하기
                 <Courses courses={course} key={course.id} />
@@ -79,7 +70,7 @@ const LeftNav = () => {
           </ul>
         </div>
       </div>
-      <RightNav  style={{ transform: toggle ? "translateX(100%)" : "translateX(0%)" }}/>
+      <RightNav></RightNav>
       <FoldBtn></FoldBtn>
     </nav >
   )

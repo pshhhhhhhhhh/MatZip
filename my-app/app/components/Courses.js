@@ -10,8 +10,11 @@ const Courses = (props) => {
     // 똑같은걸 누르면 토글, 다른거면 정보만 불러오기
 
     const getRToggle = useAppSelector(state => { // SearchSlice State 불러오기
-        console.log("토글 상태" + JSON.stringify(state.rightNavToggle.value))
         return state.rightNavToggle.value;
+    });
+
+    const getInfo = useAppSelector(state => { // SearchSlice State 불러오기
+        return state.rightNavToggle.regionInfo;
     });
 
 
@@ -19,8 +22,8 @@ const Courses = (props) => {
     const dispatch = useAppDispatch();
 
     const toggleHandeler = () => { //디테일페이지 열기
-        dispatch(rightNavActions.regionInfo(props))
-        dispatch(rightNavActions.toggle()) // 디테일 페이지를 열어
+        dispatch(rightNavActions.regionInfo(props.courses))
+        //dispatch(rightNavActions.toggle()) // 디테일 페이지를 열어
     }
 
 

@@ -84,7 +84,7 @@ div {
 }
 
 
-.search-wrap i:hover{
+.search-wrap2 i:hover{
     cursor: pointer;
 }
 
@@ -258,7 +258,7 @@ div {
 }
 
 .course-wrap::-webkit-scrollbar{ /*스크롤바 바꾸기*/
-    width: 8px;
+    width: 7px;
     /* height: 6px; */
 }
 .course-wrap::-webkit-scrollbar-thumb{
@@ -317,6 +317,7 @@ div {
     transition: all 0.5s;
     transform: translateX(100%);
     box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 5px 0px 15px 0px;
+    
 }
 
 .rFold-button {

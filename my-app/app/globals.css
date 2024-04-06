@@ -6,6 +6,7 @@ body {
 div {
     box-sizing: border-box;
 }
+
 /* 
 .nav-right-content {
     display: flex;
@@ -53,12 +54,12 @@ div {
     overflow-y: auto;
 }
 
-.search-wrap1{
-    display : flex;
+.search-wrap1 {
+    display: flex;
     z-index: 100;
     background-color: white;
-    justify-content : center;
-    padding : 15px 25px; 
+    justify-content: center;
+    padding: 15px 25px;
 }
 
 .search-wrap2 {
@@ -84,7 +85,7 @@ div {
 }
 
 
-.search-wrap2 i:hover{
+.search-wrap2 i:hover {
     cursor: pointer;
 }
 
@@ -257,15 +258,18 @@ div {
     overflow-y: auto;
 }
 
-.course-wrap::-webkit-scrollbar{ /*스크롤바 바꾸기*/
+.course-wrap::-webkit-scrollbar {
+    /*스크롤바 바꾸기*/
     width: 7px;
     /* height: 6px; */
 }
-.course-wrap::-webkit-scrollbar-thumb{
+
+.course-wrap::-webkit-scrollbar-thumb {
     border-radius: 3px;
     background: #c4c6c8;
 }
-.course-wrap::-webkit-scrollbar-track-piece{
+
+.course-wrap::-webkit-scrollbar-track-piece {
     background: #f0f0f3;
 }
 
@@ -303,7 +307,7 @@ div {
 }
 
 
-.right-navbar{
+.right-navbar {
     display: flex;
     flex-direction: column;
     width: 400px;
@@ -317,7 +321,7 @@ div {
     transition: all 0.5s;
     transform: translateX(100%);
     box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 5px 0px 15px 0px;
-    
+
 }
 
 .rFold-button {
@@ -364,7 +368,30 @@ div {
     color: rgb(52, 142, 244);
 }
 
+.slide-wrap {
+    display: flex;
+    flex-direction: column;
+    height: 35%;
+    /* overflow : hidden; */
+}
 
+.slide-container {
+    display: flex;
+    transition: all 1s;
+    width: 300%;
+    height: 100%;
+    transform: translateX(0%);
+  }
+  .slide-box {
+    /* padding: 10px; */
+    width: 100%;
+    height: 100%;
+    float: left;
+  }
+  .slide-box img {
+    width: 100%;
+    height: 100%;
+  } 
 
 
 

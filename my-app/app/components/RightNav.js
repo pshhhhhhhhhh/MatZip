@@ -18,17 +18,24 @@ const RightNav = () => {
 
     const [slideNum, setSlideNum] = useState(1);
 
-    function slideAction(num) {
-        if (num === 1) {
-            setSlideNum(1)
+
+    function slideLeft(){
+        if(slideNum > 1){
+        setSlideNum(slideNum-1)
         }
-        else if (num === 2) {
-            setSlideNum(1);
-        }
-        else if (num === 3) {
-            setSlideNum(3);
+        else{
+            return setSlideNum(3)
         }
     }
+    function slideRight(){
+        if(slideNum < 3){
+        setSlideNum(slideNum+1)
+        }
+        else{
+            return setSlideNum(1)
+        }
+    }
+
 
 
     return (
@@ -43,9 +50,9 @@ const RightNav = () => {
 
             <div className="slide-wrap" >
                 <div className="slide-container" id="slide" style={{
-                    transform: slideNum === 1 ? "translateX(0px)" : 
-                    slideNum === 2 ?
-                    "translateX(-33.5%)" : "translateX(-66.7%)"
+                    transform: slideNum === 1 ? "translateX(0px)" :
+                        slideNum === 2 ?
+                            "translateX(-33.5%)" : "translateX(-66.7%)"
                 }}>
                     <div className="slide-box">
                         <img src="/allRight1.jpg" alt="올라이트1" />
@@ -57,12 +64,26 @@ const RightNav = () => {
                         <img src="/allRight3.jpg" alt="올라이트3" />
                     </div>
                 </div>
-                
-           
             </div>
-            <button onClick={() => setSlideNum(1)}>1번</button>
-            <button onClick={() => setSlideNum(2)}>2번</button>
-            <button onClick={() => setSlideNum(3)}>3번</button>
+            <div className="slide-next-btn-wrap">
+                <div className="slide-next-btn" onClick={() => slideLeft()}>
+                    <i className="fas fa-angle-left fa-lg fa-1.5x"></i>
+                </div>
+                <div style={{flexGrow:"2"}}></div>
+                <div  className="slide-next-btn" onClick={() => slideRight()}>
+                    <i className="fas fa-angle-right fa-lg fa-1.5x" ></i>
+                </div>
+            </div>
+
+            <div className="slide-btn-wrap">
+                <a className="slide-btn" style={{backgroundColor:slideNum === 1 ? "white": "rgb(155, 156, 158)"}}
+                onClick={() => setSlideNum(1)}></a>
+                <a className="slide-btn" style={{backgroundColor:slideNum === 2 ? "white": "rgb(155, 156, 158)"}}
+                onClick={() => setSlideNum(2)}></a>
+                <a className="slide-btn" style={{backgroundColor:slideNum === 3 ? "white": "rgb(155, 156, 158)"}}
+                onClick={() => setSlideNum(3)}></a>
+            </div>
+
             <a>홀롤로</a>
             <Rbtn />
         </nav>

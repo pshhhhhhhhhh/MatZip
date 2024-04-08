@@ -317,7 +317,7 @@ div {
     position: absolute;
     z-index: 20;
     color: black;
-    background: white;
+    background-color: rgb(240, 240, 243);
     transition: all 0.5s;
     transform: translateX(100%);
     box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 5px 0px 15px 0px;
@@ -442,6 +442,38 @@ div {
   }
 
 
+  .Rtitle-wrap{
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+
+  .Rtitle{
+    background-color: white;
+    padding: 16px;
+  }
+
+  .Rtitle-name{
+    margin-right: 4px;
+    font-size: 20px;
+    font-weight: 600;
+  }
+  .Rtitle-sub{
+    /* vertical-align: top; */
+    margin-right: 4px;
+    font-size: 15px;
+    color: #939396;
+  }
+
+  .Rcontent-wrap{
+    padding :16px;
+    background-color: white;
+  }
+
+  .Rcontent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 
 
 .main-content {

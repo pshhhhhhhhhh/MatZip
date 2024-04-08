@@ -84,7 +84,22 @@ const RightNav = () => {
                 onClick={() => setSlideNum(3)}></a>
             </div>
 
-            <a>홀롤로</a>
+            <div className="Rtitle-wrap">
+                <div className="Rtitle">
+                    <span className="Rtitle-name">올라이트</span>
+                    <span className="Rtitle-sub">문구,팬시</span>
+                </div>
+            </div>
+            <div className="Rcontent-wrap">
+                <div className="Rcontent">
+                    <span>서울특별시 종로구 체부동 102</span>
+                    <span>경복궁역 2번 출구에서 441m</span>
+                    <div>
+                        <span>13 : 00 PM ~ 17 : 00PM</span>
+                        <span style={{color : "#939396"}}> 화요일 휴무</span>
+                    </div>
+                </div>
+            </div>
             <Rbtn />
         </nav>
 

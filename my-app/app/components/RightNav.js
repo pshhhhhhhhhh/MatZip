@@ -89,15 +89,22 @@ const RightNav = () => {
                     <span className="Rtitle-name">올라이트</span>
                     <span className="Rtitle-sub">문구,팬시</span>
                 </div>
+                <div className="Rtitle">
+                    <span className="Rtitle-name">레종데트르르</span>
+                    <span className="Rtitle-sub">카페</span>
+                </div>
+                <div className="Rtitle">
+                    <span className="Rtitle-name">카라멜어쩌구</span>
+                    <span className="Rtitle-sub">이탈리아음식</span>
+                </div>
             </div>
             <div className="Rcontent-wrap">
                 <div className="Rcontent">
                     <span>서울특별시 종로구 체부동 102</span>
                     <span>경복궁역 2번 출구에서 441m</span>
-                    <div>
-                        <span>13 : 00 PM ~ 17 : 00PM</span>
-                        <span style={{color : "#939396"}}> 화요일 휴무</span>
-                    </div>
+                    <span>13 : 00 PM ~ 17 : 00PM <span style={{color : "#939396"}}> 화요일 휴무</span></span>
+                    <span>031-707-8180</span>
+                    
                 </div>
             </div>
             <Rbtn />

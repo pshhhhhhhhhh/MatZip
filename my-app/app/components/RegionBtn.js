@@ -8,6 +8,7 @@ import { searchActions } from "@/lib/searchSlice";
 
 const RegionBtn = (props) => {
 
+    // console.log(" 몽고에서 옴? "+ JSON.stringify(props.regions))
 
     const [toggle, setToggle] = useState(false);
 

@@ -315,7 +315,7 @@ div {
     height: 100vh;
     /* padding-left: 10px; */
     position: absolute;
-    z-index: 20;
+    z-index: -10;
     color: black;
     /* background-color: rgb(240, 240, 243); */
     background-color: white;

@@ -8,6 +8,8 @@ import { searchActions } from "@/lib/searchSlice";
 
 const Search = (props) => {
 
+    // console.log("여기는 서치 " + JSON.stringify(props.course))
+
     const test = JSON.stringify(props.course)
 
 

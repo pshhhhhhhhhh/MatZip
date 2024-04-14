@@ -37,10 +37,13 @@ const regionUiSlice = createSlice({ //카운터라는 스토어의 액션 정의
                         id: newRegion.id,
                         regionname: newRegion.regionname,
                         store1: newRegion.store1,
+                        store1type: newRegion.store1type,
                         store1address: newRegion.store1address,
                         store2: newRegion.store2,
+                        store2type: newRegion.store2type,
                         store2address: newRegion.store2address,
                         store3: newRegion.store3,
+                        store3type: newRegion.store3type,
                         store3address: newRegion.store3address,
                     }
                 );

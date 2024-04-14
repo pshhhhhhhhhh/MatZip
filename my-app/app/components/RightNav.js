@@ -10,10 +10,33 @@ const RightNav = () => {
         return state.rightNavToggle.value;
     });
 
-    const Info = useAppSelector(state => { // 디테일 네브바 토글 액션값 불러오기
+    const Info = useAppSelector(state => { 
         console.log("잘 들어옴? " + JSON.stringify(state.rightNavToggle.regionInfo));
         return state.rightNavToggle.regionInfo;
     });
+
+    const store1 = useAppSelector(state => { 
+        return state.rightNavToggle.regionInfo.store1;
+    });
+    const store1type = useAppSelector(state => {
+        return state.rightNavToggle.regionInfo.store1type;
+    });
+
+    const store2 = useAppSelector(state => { 
+        return state.rightNavToggle.regionInfo.store2;
+    });
+    const store2type = useAppSelector(state => {
+        return state.rightNavToggle.regionInfo.store2type;
+    });
+
+    const store3 = useAppSelector(state => { 
+        return state.rightNavToggle.regionInfo.store3;
+    });
+    const store3type = useAppSelector(state => {
+        return state.rightNavToggle.regionInfo.store3type;
+    });
+
+
 
 
     const [slideNum, setSlideNum] = useState(1);
@@ -86,16 +109,16 @@ const RightNav = () => {
 
             <div className="Rtitle-wrap">
                 <div className="Rtitle">
-                    <span className="Rtitle-name">올라이트</span>
-                    <span className="Rtitle-sub">문구,팬시</span>
+                    <span className="Rtitle-name">{store1}</span>
+                    <span className="Rtitle-sub">{store1type}</span>
                 </div>
                 <div className="Rtitle">
-                    <span className="Rtitle-name">레종데트르르</span>
-                    <span className="Rtitle-sub">카페</span>
+                    <span className="Rtitle-name">{store2}</span>
+                    <span className="Rtitle-sub">{store2type}</span>
                 </div>
                 <div className="Rtitle">
-                    <span className="Rtitle-name">카라멜어쩌구</span>
-                    <span className="Rtitle-sub">이탈리아음식</span>
+                    <span className="Rtitle-name">{store3}</span>
+                    <span className="Rtitle-sub">{store3type}</span>
                 </div>
             </div>
             <div className="Rcontent-wrap">
@@ -104,7 +127,6 @@ const RightNav = () => {
                     <span>경복궁역 2번 출구에서 441m</span>
                     <span>13 : 00 PM ~ 17 : 00PM <span style={{color : "#939396"}}> 화요일 휴무</span></span>
                     <span>031-707-8180</span>
-                    
                 </div>
             </div>
             <Rbtn />

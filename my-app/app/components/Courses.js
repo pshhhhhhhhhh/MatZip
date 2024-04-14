@@ -32,6 +32,7 @@ const Courses = (props) => {
             <a style={{ color: "#333" }}>{props.courses.regionname}</a>
             <div className="store-name">
                 <a>{props.courses.store1}</a>
+                <span> {props.courses.store1type}</span>
             </div>
             <div className="store-address">
                 <a>{props.courses.store1address}</a>
@@ -39,6 +40,7 @@ const Courses = (props) => {
             <div style={{ marginBottom: "15px" }}></div>
             <div className="store-name">
                 <a>{props.courses.store2}</a>
+                <span> {props.courses.store2type}</span>
             </div>
             <div className="store-address">
                 <a>{props.courses.store2address}</a>
@@ -46,6 +48,7 @@ const Courses = (props) => {
             <div style={{ marginBottom: "15px" }}></div>
             <div className="store-name">
                 <a>{props.courses.store3}</a>
+                <span> {props.courses.store3type}</span>
             </div>
             <div className="store-address">
                 <a>{props.courses.store3address}</a>

@@ -52,10 +52,13 @@ const searchSlice = createSlice({ //카운터라는 스토어의 액션 정의
                             id: arr.id,
                             regionname: arr.regionname,
                             store1: arr.store1,
+                            store1type: arr.store1type,
                             store1address: arr.store1address,
                             store2: arr.store2,
+                            store2type: arr.store2type,
                             store2address: arr.store2address,
                             store3: arr.store3,
+                            store3type: arr.store3type,
                             store3address: arr.store3address,
                         }
                     );
@@ -70,10 +73,13 @@ const searchSlice = createSlice({ //카운터라는 스토어의 액션 정의
                             id: arr.id,
                             regionname: arr.regionname,
                             store1: arr.store1,
+                            store1type: arr.store1type,
                             store1address: arr.store1address,
                             store2: arr.store2,
+                            store2type: arr.store2type,
                             store2address: arr.store2address,
                             store3: arr.store3,
+                            store3type: arr.store3type,
                             store3address: arr.store3address,
                         }
                     );
@@ -104,10 +110,13 @@ const searchSlice = createSlice({ //카운터라는 스토어의 액션 정의
                             id: arr.id,
                             regionname: arr.regionname,
                             store1: arr.store1,
+                            store1type: arr.store1type,
                             store1address: arr.store1address,
                             store2: arr.store2,
+                            store2type: arr.store2type,
                             store2address: arr.store2address,
                             store3: arr.store3,
+                            store3type: arr.store3type,
                             store3address: arr.store3address,
                         }
                     );
@@ -125,10 +134,13 @@ const searchSlice = createSlice({ //카운터라는 스토어의 액션 정의
                                 id: arr.id,
                                 regionname: arr.regionname,
                                 store1: arr.store1,
+                                store1type: arr.store1type,
                                 store1address: arr.store1address,
                                 store2: arr.store2,
+                                store2type: arr.store2type,
                                 store2address: arr.store2address,
                                 store3: arr.store3,
+                                store3type: arr.store3type,
                                 store3address: arr.store3address,
                             }
                         );

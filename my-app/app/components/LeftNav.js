@@ -8,8 +8,9 @@ import FoldBtn from "./FoldBtn";
 import RegionBtn from "./RegionBtn";
 import Courses from "./Courses";
 import RightNav from "./RightNav";
-import { region } from "../page"; //임시 데이타
-import { course } from "../page"; //임시 데이타
+
+//import { region } from "../page"; //임시 데이타
+//import { course } from "../page"; //임시 데이타
 import { useState, useEffect } from "react";
 
 // const LeftNav = ({regions,courses}) => {

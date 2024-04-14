@@ -301,6 +301,11 @@ div {
     color: #333;
 }
 
+.store-name span{
+    font-size: 15px;
+    color: #939396;
+}
+
 .store-address {
     margin-top: 4px;
     color: #555558;

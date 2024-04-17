@@ -21,6 +21,19 @@ const RightNav = () => {
     const store1type = useAppSelector(state => {
         return state.rightNavToggle.regionInfo.store1type;
     });
+    const store1address = useAppSelector(state => {
+        return state.rightNavToggle.regionInfo.store1address;
+    });
+    const store1address2 = useAppSelector(state => {
+        return state.rightNavToggle.regionInfo.store1address2;
+    });
+
+    const store1time = useAppSelector(state => {
+        return state.rightNavToggle.regionInfo.store1time;
+    });
+    const store1phone = useAppSelector(state => {
+        return state.rightNavToggle.regionInfo.store1phone;
+    });
 
     const store2 = useAppSelector(state => { 
         return state.rightNavToggle.regionInfo.store2;
@@ -123,10 +136,10 @@ const RightNav = () => {
             </div>
             <div className="Rcontent-wrap">
                 <div className="Rcontent">
-                    <span>서울특별시 종로구 체부동 102</span>
-                    <span>경복궁역 2번 출구에서 441m</span>
-                    <span>13 : 00 PM ~ 17 : 00PM <span style={{color : "#939396"}}> 화요일 휴무</span></span>
-                    <span>031-707-8180</span>
+                    <span>{store1address}</span>
+                    <span>{store1address2}</span>
+                    <span>{store1time}</span>
+                    <span>{store1phone}</span>
                 </div>
             </div>
             <Rbtn />

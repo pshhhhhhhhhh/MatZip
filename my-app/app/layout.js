@@ -8,6 +8,7 @@ import { useAppSelector } from "@/lib/hooks";
 
 
 
+
 const inter = Inter({ subsets: ["latin"] });
 
 
@@ -52,7 +53,6 @@ export default function RootLayout({ children }) {
           <FoldBtn></FoldBtn>
         </nav>
         */}
-        
         {children}
       </body>
       </StoreProvider>
